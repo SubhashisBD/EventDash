@@ -19,7 +19,7 @@ const EventCard: React.FC<EventCardProps> = ({ event }) => {
       className="w-72 bg-white rounded-lg shadow-md p-4 flex flex-col items-center hover:shadow-xl transition-shadow duration-200 cursor-pointer"
       onClick={handleClick}
     >
-      <Image
+      <img
         src={event.BackDropPath}
         alt={event.EventTitle}
         className="w-56 rounded mb-4"

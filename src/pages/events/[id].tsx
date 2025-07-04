@@ -40,7 +40,7 @@ export default function EventDetail({ event }: EventDetailProps) {
         >
           {/* Image and tags */}
           <article className="flex-1 flex flex-col">
-            <Image
+            <img
               src={event.PosterPath}
               alt={event.EventTitle}
               className="w-full max-w-4xl h-[220px] sm:h-[320px] md:h-[400px] lg:h-[440px] object-cover rounded-2xl mb-2 shadow-lg transition-transform duration-300 hover:scale-105"
