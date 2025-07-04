@@ -1,5 +1,9 @@
-import Image from "next/image";
 import { Geist, Geist_Mono } from "next/font/google";
+import MockData from "@/constant/MockData";
+import EventCard from "@/components/EventCard";
+import React, { useState } from "react";
+import Head from "next/head";
+import { Sun, Moon } from "lucide-react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -12,104 +16,77 @@ const geistMono = Geist_Mono({
 });
 
 export default function Home() {
+  const [search, setSearch] = useState("");
+  const [query, setQuery] = useState(""); // For search on button click
+  const [dark, setDark] = useState(false);
+
+  // Show all events if no search has been made (on refresh)
+  const filteredEvents =
+  query.trim() === ""
+    ? MockData
+    : MockData.filter(
+        event =>
+          event.Location.trim().toLowerCase() === query.trim().toLowerCase()
+      );
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    setQuery(search);
+  };
+
   return (
     <div
-      className={`${geistSans.className} ${geistMono.className} grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]`}
+      className={`${
+        dark ? "dark bg-gray-900" : "bg-gray-50"
+      } min-h-screen flex flex-col items-center justify-start py-10 px-4`}
+      style={{ fontFamily: "var(--font-geist-sans)" }}
     >
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
+      <Head>
+        <title>EventDash - Discover Events</title>
+        <meta
+          name="description"
+          content="Find and explore events by location, theme, and more on EventDash."
         />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/pages/index.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
+      </Head>
+      <form
+        className="w-full max-w-4xl flex justify-center mb-8 gap-2"
+        onSubmit={handleSearch}
+        role="search"
+        aria-label="Event location search"
+      >
+        <input
+          placeholder="Search for Location"
+          className="border border-gray-300 dark:border-gray-700 rounded-l-md px-4 py-2 w-2/3 focus:outline-none focus:ring-2 focus:ring-blue-400 dark:bg-gray-800 dark:text-white"
+          value={search}
+          onChange={e => setSearch(e.target.value)}
+          aria-label="Search for Location"
+        />
+        <button
+          type="submit"
+          className=" bg-gray-800 text-white px-6 py-2 hover:gray-red-700 transition"
+          aria-label="Search"
+        >
+          Search
+        </button>
+        <button
+          type="button"
+          className="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 px-3 py-2 rounded-r-md hover:bg-gray-300 dark:hover:bg-gray-600 transition flex items-center"
+          onClick={() => setDark(d => !d)}
+          aria-label="Toggle dark/light mode"
+        >
+          {dark ? <Sun size={20} /> : <Moon size={20} />}
+        </button>
+      </form>
+      <main className="w-full max-w-6xl grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 justify-items-center">
+        {filteredEvents.length > 0 ? (
+          filteredEvents.map(event => (
+            <EventCard key={event.Id} event={event} />
+          ))
+        ) : (
+          <div className="col-span-full text-center text-lg text-blue-500 dark:text-red-800 mt-8">
+            No events found for this location.
+          </div>
+        )}
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
     </div>
   );
 }
