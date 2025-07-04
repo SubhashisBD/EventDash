@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import React from "react";
 import { EventData } from "@/constant/MockData";
-import Image from "next/image";
+
 
 interface EventCardProps {
   event: EventData;
