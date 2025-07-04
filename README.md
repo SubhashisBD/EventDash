@@ -19,9 +19,39 @@
 
 ## Folder Structure
 
-<pre> ```text eventdash/ ├── .next/ ├── node_modules/ ├── public/ │ └── favicon.ico ├── src/ │ ├── components/ │ │ ├── EventCard.tsx │ │ └── EventFilter.tsx │ ├── constant/ │ │ └── MockData.tsx │ ├── pages/ │ │ ├── api/ │ │ │ └── hello.ts │ │ ├── events/ │ │ │ └── [id].tsx │ │ ├── _app.tsx │ │ ├── _document.tsx │ │ └── index.tsx │ ├── styles/ │ │ └── globals.css │ └── types/ │ └── event.ts ├── .gitignore ├── [eslint.config.mjs](http://_vscodecontentref_/0) ├── [next.config.ts](http://_vscodecontentref_/1) ├── [next-env.d.ts](http://_vscodecontentref_/2) ├── [package.json](http://_vscodecontentref_/3) ├── [package-lock.json](http://_vscodecontentref_/4) ├── [postcss.config.mjs](http://_vscodecontentref_/5) ├── [README.md](http://_vscodecontentref_/6) ├── tailwind.config.ts └── [tsconfig.json](http://_vscodecontentref_/7) ``` </pre>
-This will render your folder structure in a readable, indented tree format.</pre>
-
+EVENTDASH/
+├── .next/
+├── node_modules/
+├── public/
+│   └── favicon.ico
+├── src/
+│   ├── components/
+│   │   ├── EventCard.tsx
+│   │   └── EventFilter.tsx
+│   ├── constant/
+│   │   └── MockData.tsx
+│   ├── pages/
+│   │   ├── api/
+│   │   │   └── hello.ts
+│   │   ├── events/
+│   │   │   └── [id].tsx
+│   │   ├── _app.tsx
+│   │   ├── _document.tsx
+│   │   └── index.tsx
+│   ├── styles/
+│   │   └── globals.css
+│   └── types/
+│       └── event.ts
+├── .gitignore
+├── eslint.config.mjs
+├── next.config.ts
+├── next-env.d.ts
+├── package.json
+├── package-lock.json
+├── postcss.config.mjs
+├── README.md
+├── tailwind.config.ts
+└── tsconfig.json
 ## Instructions to Run the App
 
 1. **Install dependencies:**
