@@ -2,7 +2,6 @@ import { GetStaticPaths, GetStaticProps } from "next";
 import Head from "next/head";
 import MockData from "@/constant/MockData";
 import { EventData } from "@/constant/MockData";
-
 import {
   Calendar,
   Clock,

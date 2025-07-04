@@ -18,7 +18,7 @@
 
 
 ## Folder Structure
-Events Explorer - Project Structure
+
 EVENTDASH/
 ├── .next/
 ├── node_modules/
@@ -52,7 +52,6 @@ EVENTDASH/
 ├── README.md
 ├── tailwind.config.ts
 └── tsconfig.json
-
 
 ## Instructions to Run the App
 
