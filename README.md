@@ -1,11 +1,10 @@
+## MY Approach-
 
- ## MY Approach-
-
--Gathered mock data from BookMyShow, including images and other relevant details, and structured it into an array of objects
--Implemented a search bar with case-insensitive filtering to enhance user experience.
--Added a toggle button to switch between dark and light modes on click.
--Ensured the UI is fully responsive across different screen sizes.
--Deployed the project on Vercel for seamless access and sharing.
+**Gathered mock data from BookMyShow, including images and other relevant details, and structured it into an array of objects**
+**Implemented a search bar with case-insensitive filtering to enhance user experience.**
+**Added a toggle button to switch between dark and light modes on click.**
+**Ensured the UI is fully responsive across different screen sizes.**
+**Deployed the project on Vercel for seamless access and sharing.**
 
 - **Next.js** is used for server-side rendering, routing, and SEO.
 - **Tailwind CSS** provides utility-first, responsive, and modern styling.
@@ -16,10 +15,9 @@
 - **Dark/Light Mode**: Toggle button for theme switching.
 - **Search**: Case-insensitive, exact-match search for event locations.
 
-
 ## Folder Structure
 
-EVENTDASH/
+```EVENTDASH/
 ├── .next/
 ├── node_modules/
 ├── public/
@@ -52,19 +50,23 @@ EVENTDASH/
 ├── README.md
 ├── tailwind.config.ts
 └── tsconfig.json
+```
+
 ## Instructions to Run the App
 
 1. **Install dependencies:**
    ```bash
    npm install
+   ```
 2. **Run the development server:**
    npm run dev
 
 3.**Open your browser and visit:**
-  http://localhost:3000
+http://localhost:3000
 
 ## Improvement Possible
--I can add authenctication
--Add pagination or infinite scroll for large Images
--Enhance beautiful UI
--Addtion of gemini/GPT to check upcoming event through search
+
+**I can add authenctication**
+**Add pagination or infinite scroll for large Images**
+**Enhance beautiful UI**
+**Addtion of gemini/GPT to check upcoming event through search**
