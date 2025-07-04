@@ -1,19 +1,9 @@
-import { Geist, Geist_Mono } from "next/font/google";
+
 import MockData from "@/constant/MockData";
 import EventCard from "@/components/EventCard";
 import React, { useState } from "react";
 import Head from "next/head";
 import { Sun, Moon } from "lucide-react";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export default function Home() {
   const [search, setSearch] = useState("");
