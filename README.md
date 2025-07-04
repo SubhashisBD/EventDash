@@ -20,38 +20,38 @@
 ## Folder Structure
 
 EVENTDASH/
-|-- .next/
-|-- node_modules/
-|-- public/
-|   |-- favicon.ico
-|-- src/
-|   |-- components/
-|   |   |-- EventCard.tsx
-|   |   |-- EventFilter.tsx
-|   |-- constant/
-|   |   |-- MockData.tsx
-|   |-- pages/
-|   |   |-- api/
-|   |   |   |-- hello.ts
-|   |   |-- events/
-|   |   |   |-- [id].tsx
-|   |   |-- _app.tsx
-|   |   |-- _document.tsx
-|   |   |-- index.tsx
-|   |-- styles/
-|   |   |-- globals.css
-|   |-- types/
-|       |-- event.ts
-|-- .gitignore
-|-- eslint.config.mjs
-|-- next.config.ts
-|-- next-env.d.ts
-|-- package.json
-|-- package-lock.json
-|-- postcss.config.mjs
-|-- README.md
-|-- tailwind.config.ts
-|-- tsconfig.json
+├── .next/
+├── node_modules/
+├── public/
+│   └── favicon.ico
+├── src/
+│   ├── components/
+│   │   ├── EventCard.tsx
+│   │   └── EventFilter.tsx
+│   ├── constant/
+│   │   └── MockData.tsx
+│   ├── pages/
+│   │   ├── api/
+│   │   │   └── hello.ts
+│   │   ├── events/
+│   │   │   └── [id].tsx
+│   │   ├── _app.tsx
+│   │   ├── _document.tsx
+│   │   └── index.tsx
+│   ├── styles/
+│   │   └── globals.css
+│   └── types/
+│       └── event.ts
+├── .gitignore
+├── eslint.config.mjs
+├── next.config.ts
+├── next-env.d.ts
+├── package.json
+├── package-lock.json
+├── postcss.config.mjs
+├── README.md
+├── tailwind.config.ts
+└── tsconfig.json
 ## Instructions to Run the App
 
 1. **Install dependencies:**
