@@ -1,10 +1,10 @@
 ## MY Approach-
 
-**Gathered mock data from BookMyShow, including images and other relevant details, and structured it into an array of objects**
-**Implemented a search bar with case-insensitive filtering to enhance user experience.**
-**Added a toggle button to switch between dark and light modes on click.**
-**Ensured the UI is fully responsive across different screen sizes.**
-**Deployed the project on Vercel for seamless access and sharing.**
+-**Gathered mock data from BookMyShow, including images and other relevant details, and structured it into an array of objects**
+-**Implemented a search bar with case-insensitive filtering to enhance user experience.**
+-**Added a toggle button to switch between dark and light modes on click.**
+-**Ensured the UI is fully responsive across different screen sizes.**
+-**Deployed the project on Vercel for seamless access and sharing.**
 
 - **Next.js** is used for server-side rendering, routing, and SEO.
 - **Tailwind CSS** provides utility-first, responsive, and modern styling.
@@ -66,7 +66,7 @@ http://localhost:3000
 
 ## Improvement Possible
 
-**I** can add authenctication
-**Add** pagination or infinite scroll for large Images
-**Enhance** beautiful UI
-**Addtion** of gemini/GPT to check upcoming event through search
+-**I** can add authenctication
+-**Add** pagination or infinite scroll for large Images
+-**Enhance** beautiful UI
+-**Addtion** of gemini/GPT to check upcoming event through search
