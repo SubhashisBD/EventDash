@@ -66,7 +66,7 @@ http://localhost:3000
 
 ## Improvement Possible
 
-**I can add authenctication**
-**Add pagination or infinite scroll for large Images**
-**Enhance beautiful UI**
-**Addtion of gemini/GPT to check upcoming event through search**
+**I** can add authenctication
+**Add** pagination or infinite scroll for large Images
+**Enhance** beautiful UI
+**Addtion** of gemini/GPT to check upcoming event through search
