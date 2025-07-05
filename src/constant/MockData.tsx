@@ -129,7 +129,7 @@ const MockData: EventData[] = [
   },
   {
     Id: 6,
-    EventTitle: "Bismil Ki Mehfil 2025",
+    EventTitle: "Taylor Swiftchella",
     Price: "499",
     Date: "6th July 2025",
     Location: "Delhi",
